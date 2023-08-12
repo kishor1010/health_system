@@ -1,0 +1,11 @@
+<% layout('../views/layout') %>
+
+<ul>
+<% for(let disease of diseases){%> 
+    <li><%= disease.name %> </li> -- <p><%= disease.type %> </p> <a href="/disease/edit/<%= disease._id %>">Edit</a>
+
+    <a href="/disease/<%= disease._id %>">View</a>
+
+    <form action="/disease/delete/<%= disease._id %>?_method=DELETE" method="POST"><button>Delete</button></form>
+    <% } %> 
+</ul>

@@ -1,0 +1,11 @@
+<% layout('../views/layout') %>
+
+<ul>
+<% for(let patient of patients){ %> 
+    <li> <%= patient.firstname %> </li>
+    <p><%= patient.lastname %> </p>
+    <a href="/patient/<%= patient._id %>">View</a>
+
+    <form action="patient/delete/<%= patient._id %>?_method=DELETE" method="POST"><button>Delete</button></form>
+    <%} %> 
+</ul>

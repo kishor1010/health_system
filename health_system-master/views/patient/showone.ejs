@@ -1,0 +1,11 @@
+<% layout('../views/layout') %>
+
+<h1><%= patient.firstname %> </h1>
+<h2><%= patient.lastname %> </h2>
+
+<% for(let disease of patient.diseases){ %> 
+    <h3><%= disease.name %> </h3>
+    <h4><%= disease.type %> </h4>
+    <% } %> 
+
+    <a href="/patient/edit/<%= patient._id %>">Edit</a>
